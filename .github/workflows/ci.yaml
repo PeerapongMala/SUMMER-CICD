@@ -2,9 +2,9 @@ name: server CI
 
 on:
   push:
-    branch: [ main ]
+    branch: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-test:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install
@@ -37,4 +37,4 @@ jobs:
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
           CI: true
-        run: render deploys create srv-cvpvib1r0fns73898io0 --output json --confirm
+        run: render deploys create srv-d0aovq1r0fns73cotg0g --output json --confirm
